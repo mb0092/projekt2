@@ -9,7 +9,7 @@ Enter a number:"""
 MSG_INPUT = ">>> "
 MSG_SEP_LINE = "-----------------------------------------------"
 MSG_BAD_INPUT = "Enter 4 unique digits please"
-MSG_FINAL_RESULT = """Correct, you've guessed the right number 
+MSG_FINAL_RESULT = """Correct, you've guessed the right number
 in {} guesses!"""
 MSG_BULLS = {True : "bull", False : "bulls"}
 MSG_COWS = {True : "cow", False : "cows"}

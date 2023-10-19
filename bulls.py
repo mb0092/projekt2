@@ -61,10 +61,10 @@ def get_new_guess_from_user():
 def evaluate_new_guess(guess, secret):
     """ Count cows and bulls for given set """
     sum_bulls, sum_cows = 0, 0
-    for x in range(0, len(guess)):
-        sum_bulls += 1 if guess[x] == secret[x] else 0
-        sum_cows += 1 if guess[x] in secret and guess[x] != secret[x] else 0
-    return bulls, cows
+    for x, item in enumerate(guess):
+        sum_bulls += 1 if item == secret[x] else 0
+        sum_cows += 1 if item in secret and item != secret[x] else 0
+    return sum_bulls, sum_cows
 
 def results_of_the_round(sum_bulls, sum_cows, last_list, counter) -> bool:
     """ Print result and evaluate if next round necessary """
@@ -84,8 +84,8 @@ def results_of_the_round(sum_bulls, sum_cows, last_list, counter) -> bool:
         games_results[len(games_results)] = [counter, elapsed_time]
         print(msg.MSG_GAME_SCORE)
         print(msg.MSG_SEP_LINE)
-        for x in range(0, len(games_results)):
-            print(msg.MSG_GAME_SCORE_ROW.format(x+1, games_results[x][0], games_results[x][1]))
+        for x, item in enumerate(games_results):
+            print(msg.MSG_GAME_SCORE_ROW.format(x+1, item[0], item[1]))
         # Not guessed is false now
         print(msg.MSG_SEP_LINE)
         return False

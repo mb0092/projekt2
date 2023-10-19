@@ -9,7 +9,7 @@ Zadej čtyři čísla:"""
 MSG_INPUT = ">>> "
 MSG_SEP_LINE = "-----------------------------------------------"
 MSG_BAD_INPUT = "Je nutné zadat čtyři a to různá čísla"
-MSG_FINAL_RESULT = """Správně, uhodl jsi správnou kombinaci všech čísel 
+MSG_FINAL_RESULT = """Správně, uhodl jsi správnou kombinaci všech čísel
 a potřeboval jsi {} pokusů!"""
 MSG_BULLS = {True : "bull", False : "bulls"}
 MSG_COWS = {True : "cow", False : "cows"}
